@@ -34,6 +34,12 @@ public class LinkedList<K> {
         newNodeToAddInBetween.setNext(temp);
     }
 
+    public void pop() {
+        INode<K> tempNode = this.head;
+        this.head = tempNode.getNext();
+        tempNode.setNext(null);
+    }
+
     public void print() {
         INode<K> temp = head;
         while(temp != null) {
