@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class LinkedList<K> {
     public INode<K> head;
     public INode<K> tail;
@@ -40,11 +42,34 @@ public class LinkedList<K> {
         tempNode.setNext(null);
     }
 
+    public void popLast() {
+        INode<K> tempNode = this.head;
+        if (this.head == this.tail) {
+            System.out.println("There is only single element. Select option \n 1. Delete   2.Don't delete");
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter option : ");
+            int option = sc.nextInt();
+            switch (option) {
+                case 1:
+                    this.head = null;
+                    this.tail = null;
+                    break;
+                case 2:
+                    break;
+            }
+        }
+        else if (tempNode.getNext().getNext() != null) {
+            tempNode = tempNode.getNext();
+        }
+        tempNode.setNext(null);
+    }
+
     public void print() {
         INode<K> temp = head;
         while(temp != null) {
             System.out.print(temp);
             temp = temp.getNext();
         }
+        System.out.println();
     }
 }

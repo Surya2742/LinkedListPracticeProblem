@@ -9,8 +9,8 @@ public class Main {
         ll.insert(firstNode, thirdNode);
         System.out.print("Linked List Sequence: ");
         ll.print();
-        ll.pop();
-        System.out.print("\nLinked List Sequence after deleting First Element using Pop Method : ");
+        ll.popLast();
+        System.out.print("\nLinked List Sequence after deleting Last Element using Pop Method : ");
         ll.print();
     }
 }
