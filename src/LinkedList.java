@@ -28,6 +28,12 @@ public class LinkedList<K> {
         }
     }
 
+    public void insert(INode<K> referenceNode, INode<K> newNodeToAddInBetween) {
+        INode<K> temp = referenceNode.getNext();
+        referenceNode.setNext(newNodeToAddInBetween);
+        newNodeToAddInBetween.setNext(temp);
+    }
+
     public void print() {
         INode<K> temp = head;
         while(temp != null) {
