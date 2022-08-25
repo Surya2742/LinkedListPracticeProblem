@@ -17,4 +17,8 @@ public class Node<K> implements INode<K> {
     public void setNext(INode<K> next) {
         this.next = next;
     }
+
+    public String toString() {
+        return key + "->";
+    }
 }
