@@ -6,7 +6,8 @@ public class Main {
         Node<Integer> secondNode = new Node<>(70);
         ll.append(secondNode);
         Node<Integer> thirdNode = new Node<>(30);
-        ll.insert(firstNode, thirdNode);
+        ll.insert(56, thirdNode);
+        System.out.println(ll.searchNode(30));
         System.out.print("Linked List Sequence: ");
         ll.print();
         ll.popLast();

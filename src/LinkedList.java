@@ -30,7 +30,8 @@ public class LinkedList<K> {
         }
     }
 
-    public void insert(INode<K> referenceNode, INode<K> newNodeToAddInBetween) {
+    public void insert(int value, INode<K> newNodeToAddInBetween) {
+        INode<K> referenceNode = searchNode(value);
         INode<K> temp = referenceNode.getNext();
         referenceNode.setNext(newNodeToAddInBetween);
         newNodeToAddInBetween.setNext(temp);
@@ -60,8 +61,16 @@ public class LinkedList<K> {
         }
         else if (tempNode.getNext().getNext() != null) {
             tempNode = tempNode.getNext();
+            tempNode.setNext(null);
         }
-        tempNode.setNext(null);
+    }
+
+    public INode<K> searchNode(int value) {
+        INode<K> temp = this.head;
+        while(!temp.getKey().equals(value) ) {
+            temp = temp.getNext();
+        }
+        return temp;
     }
 
     public void print() {
