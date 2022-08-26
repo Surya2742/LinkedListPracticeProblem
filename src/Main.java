@@ -10,8 +10,8 @@ public class Main {
         System.out.println(ll.searchNode(30));
         System.out.print("Linked List Sequence: ");
         ll.print();
-        ll.popLast();
-        System.out.print("\nLinked List Sequence after deleting Last Element using Pop Method : ");
+        Node<Integer> fourthNode = new Node<>(40);
+        ll.insert(30, fourthNode);
         ll.print();
     }
 }
