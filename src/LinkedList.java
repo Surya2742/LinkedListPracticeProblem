@@ -73,6 +73,27 @@ public class LinkedList<K> {
         return temp;
     }
 
+    public void remove(int value) {
+        INode<K> temp = this.head;
+        INode<K> previous = null;
+        while(!temp.getKey().equals(value) ) {
+            previous = temp;
+            temp = temp.getNext();
+        }
+        previous.setNext(temp.getNext());
+        System.out.println(size());
+    }
+
+    public int size() {
+        INode<K> node = this.head;
+        int count = 1;
+        while (node.getNext() != null) {
+            count += 1;
+            node = node.getNext();
+        }
+        return count;
+    }
+
     public void print() {
         INode<K> temp = head;
         while(temp != null) {

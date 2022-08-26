@@ -12,6 +12,11 @@ public class Main {
         ll.print();
         Node<Integer> fourthNode = new Node<>(40);
         ll.insert(30, fourthNode);
+        System.out.print("Linked List Sequence after inserting 40 after 30 : ");
+        ll.print();
+        System.out.print("Size of Linked List after deleting : ");
+        ll.remove(40);
+        System.out.print("Size of Linked List Sequence after deleting 40 from linked list : ");
         ll.print();
     }
 }
